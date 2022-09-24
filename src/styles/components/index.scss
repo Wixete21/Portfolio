@@ -4,6 +4,41 @@
   align-items: center;
   text-align: center;
   margin-top: 187px;
+  h2 {
+    margin: 0;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 1px var(--color-primary), 0 0 5px var(--color-primary);
+    }
+    to {
+      text-shadow: 0 0 1px var(--color-primary), 0 0 5px var(--color-primary),
+        0 0 8px var(--color-primary);
+    }
+  }
+  .proposEtLigne {
+    padding-top: 125px;
+    .horizontal {
+      position: relative;
+    }
+    h2 {
+      position: absolute;
+      top: 85px;
+      left: -100%;
+    }
+  }
+  .contactEtligne {
+    padding-top: 125px;
+    .horizontal {
+      position: relative;
+    }
+    h2 {
+      position: absolute;
+      top: 85px;
+      right: -94%;
+    }
+  }
   h2:nth-child(1) {
     width: 100%;
   }
@@ -13,11 +48,54 @@
     border: none;
     background-color: white;
   }
+  .lignePropos {
+    width: 169px;
+    height: 6px;
+    border: none;
+    background-color: white;
+    position: relative;
+
+    &:after {
+      content: " ";
+      height: 69px;
+      width: 6px;
+      position: absolute;
+      background-color: white;
+      left: 0%;
+    }
+  }
+  .ligneContact {
+    width: 169px;
+    height: 6px;
+    border: none;
+    background-color: white;
+    position: relative;
+
+    &:after {
+      content: " ";
+      height: 69px;
+      width: 6px;
+      position: absolute;
+      background-color: white;
+      right: 0%;
+    }
+  }
   .vertical {
     width: 100%;
+
+    margin-top: 10px;
   }
   flex-wrap: wrap;
   .titrePrincipale {
     text-align: center;
+    margin: 42px 42px 0 42px;
+    h2 {
+      color: var(--color-white);
+      text-transform: none;
+      animation: none;
+    }
+    h1 {
+      margin-bottom: 25px;
+    }
   }
 }

@@ -10,7 +10,8 @@ h5,
 h6 {
   font-family: var(--font-primary);
   line-height: 1;
-  text-transform: uppercase;
+  color: var(--color-primary);
+  text-transform: none;
   font-weight: normal;
 }
 
@@ -18,7 +19,7 @@ h1 {
   font-family: var(--font-h1);
   font-size: var(--font-size-h1);
   margin: 0;
-  color: var(--color-white);
+  font-weight: bold;
   //---**  version mobile  **---//
   @media screen and (max-width: $breakpoint-sm) {
     font-size: var(--font-size-h1-mobile);
@@ -27,6 +28,7 @@ h1 {
 
 h2 {
   font-size: var(--font-size-h2);
+  font-weight: 600;
   //---**  version mobile  **---//
   @media screen and (max-width: $breakpoint-sm) {
     font-size: var(--font-size-h2-mobile);
@@ -55,4 +57,8 @@ p {
   @media screen and (max-width: $breakpoint-md) {
     font-size: var(font-size-content-mobile);
   }
+}
+a {
+  color: var(--color-primary);
+  text-decoration: none;
 }
