@@ -1,0 +1,34 @@
+/* ==========================================================================
+   COLORS / SETTINGS
+   ========================================================================== */
+
+:root {
+    // Couleur de base
+    --color-white: #fff;
+    --color-black: #000;
+
+    // Couleurs du projet
+    --color-primary: #5a4d51;
+    --color-primary-dark: #4b3b40;
+    --color-primary-light: #907b82;
+
+    --color-complementaire1: #f0ebe3;
+    --color-complementaire1-dark: #dfd3c0;
+    --color-complementaire1-light: #f5f3ef;
+
+    --color-complementaire2: #313f46;
+    --color-complementaire2-dark: #232f35;
+    --color-complementaire2-light: #485962;
+
+    --color-complementaire3: #304121;
+    --color-complementaire3-dark: #202d16;
+    --color-complementaire3-light: #515f45;
+
+    --color-accent: #f0544f;
+    --color-accent-dark: #db3c37;
+    --color-accent-light: #fd726e;
+
+    --color-bg-primary: #f0ebe3;
+
+    --color-ligne-header: #c6b8b7;
+}

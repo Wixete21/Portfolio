@@ -1,0 +1,23 @@
+.heroAccueil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 187px;
+  h2:nth-child(1) {
+    width: 100%;
+  }
+  .ligneProjet {
+    height: 169px;
+    width: 6px;
+    border: none;
+    background-color: white;
+  }
+  .vertical {
+    width: 100%;
+  }
+  flex-wrap: wrap;
+  .titrePrincipale {
+    text-align: center;
+  }
+}
