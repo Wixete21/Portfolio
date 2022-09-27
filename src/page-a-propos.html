@@ -4,7 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>À propos</title>
-
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
     <link rel="stylesheet" href="styles/main.css" />
     <script src="scripts/main.js" defer></script>
   </head>
@@ -47,35 +50,63 @@
         </section>
 
         <section class="zonePassions">
-          <h2>Mes passions</h2>
-          <div class="graphiquePassions"></div>
-          <div class="textePassions">
-            <h3>Jeux vidéo</h3>
-            <p>
-              Que se soit de créer des jeux vidéo ou d'y jouer, je vais tripper.
-            </p>
+          <div class="wrapper">
+            <h2>Mes passions</h2>
+            <div class="graphiquePassions"></div>
+            <div class="textePassions">
+              <h3>Jeux vidéo</h3>
+              <p>
+                Que se soit de créer des jeux vidéo ou d'y jouer, je vais
+                tripper.
+              </p>
+            </div>
           </div>
         </section>
 
         <section class="zoneCompetences">
-          <div class="Langages">
-            <h2>Langages</h2>
-            <ul>
-              <li>C sharp</li>
-              <li>Javascript</li>
-              <li>HTML</li>
-              <li>CSS</li>
-            </ul>
-          </div>
+          <div class="wrapper">
+            <div class="Langages">
+              <div class="titreLangages">
+                <h2>Langages</h2>
+              </div>
 
-          <div class="Logiciels">
-            <h2>Logiciels</h2>
-            <ul>
-              <li>Unity</li>
-              <li>Vscode</li>
-              <li>Blender</li>
-              <li>Photoshop</li>
-            </ul>
+              <ul>
+                <li>
+                  <svg class="icon icon--lg">
+                    <use xlink:href="#icon-c-sharp"></use>
+                  </svg>
+                  <h3>C sharp</h3>
+                </li>
+                <li>
+                  <svg class="icon icon--stroke icon--lg">
+                    <use xlink:href="#icon-js"></use>
+                  </svg>
+                  <h3>Javascript</h3>
+                </li>
+                <li>
+                  <svg class="icon icon--lg">
+                    <use xlink:href="#icon-html"></use>
+                  </svg>
+                  <h3>HTML</h3>
+                </li>
+                <li>
+                  <svg class="icon icon--lg">
+                    <use xlink:href="#icon-css"></use>
+                  </svg>
+                  <h3>CSS</h3>
+                </li>
+              </ul>
+            </div>
+
+            <div class="Logiciels">
+              <h2>Logiciels</h2>
+              <ul>
+                <li><h3>Unity</h3></li>
+                <li><h3>Vscode</h3></li>
+                <li><h3>Blender</h3></li>
+                <li><h3>Photoshop</h3></li>
+              </ul>
+            </div>
           </div>
         </section>
 
