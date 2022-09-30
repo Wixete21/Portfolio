@@ -11,10 +11,74 @@
 
   <body data-component="Cursor">
     <div class="site-container">
-      <header></header>
-      <div class="formulaire"></div>
-      <div class="infoContact"></div>
-      <footer></footer>
+      
+      <div class="formulaire">
+        <h1>Me contacter</h1>
+        <form action="" class="form" autocomplete="off" data-component="Form">
+          <div class="form__body">
+              <fieldset class="grid">
+                  <div class="input">
+                      <label class="input__label" for="fullname">Nom</label>
+                      <input
+                          class="input__element"
+                          type="text"
+                          name="fullname"
+                          id="fullname"
+                          placeholder="ex.: Rémi Therrien"
+                          required
+                      />
+                  </div>
+                  <div class="input">
+                      <label class="input__label" for="email">Adressse Courriel</label>
+                      <input
+                          class="input__element"
+                          type="email"
+                          name="email"
+                          id="email"
+                          placeholder="ex.: therrienremi@gmail.com"
+                          required
+                      />
+                  </div>
+                  <div class="input">
+                      <label class="input__label" for="phone">Téléphone</label>
+                      <input
+                          class="input__element"
+                          type="tel"
+                          name="phone"
+                          id="phone"
+                          placeholder="(555) 667-8879"
+                          patter="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$"
+                          required
+                      />
+                  </div>
+                  <div class="input textarea u-grid-fullwidth">
+                      <label class="input__label" for="comment">Message</label>
+                      <textarea class="input__element" name="comment" id="comment" required></textarea>
+                  </div>    
+              </fieldset>
+              
+              <footer class="form__footer">
+                  <button class="button">Envoyer</button>
+              </footer>
+          </div>
+
+          <div class="form_confirmation">
+              <h2>Merci</h2>
+              <p>Votre formulaire a bien été envoyé</p>
+          </div>
+      </form>
+      </div>
+      <div class="infoContact">
+        <ul>
+          <li>438-390-9332</li>
+          <li>therrienremi@gmail.com</li>
+          <li>Mettre Icones linkedin et github ici!</li>
+          <li>Téléchargez mon cv</li>
+        </ul>
+      </div>
+      <footer>
+        <p>Rémi Therrien © Tous droits réservés</p>
+      </footer>
     </div>
     <div class="cursor"></div>
   </body>
