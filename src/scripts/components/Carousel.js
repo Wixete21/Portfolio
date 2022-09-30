@@ -1,4 +1,4 @@
-import Swiper from 'swiper/bundle';
+import Swiper from "swiper/bundle";
 
 /** Composante Carousel de Timtools */
 export default class Carousel {
@@ -15,12 +15,12 @@ export default class Carousel {
       spaceBetween: 30,
       loop: true,
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
       },
       pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
+        el: ".swiper-pagination",
+        type: "bullets",
         clickable: true,
       },
       breakpoints: {
@@ -44,7 +44,7 @@ export default class Carousel {
 
     // Gestion des paramètres différents lorsqu'on veut avoir
     // 2 slides visibles sur grand écran et une seule sur petit écran
-    if (this.element.dataset.carousel == 'split') {
+    if (this.element.dataset.carousel == "split") {
       options = {
         ...this.defaultOptions,
         ...{
@@ -60,13 +60,13 @@ export default class Carousel {
 
     // Gestion des paramètres différents lorsqu'on veut avoir
     // 2 slides visibles sur grand écran et une seule sur petit écran
-    if (this.element.dataset.carousel == 'scroll') {
+    if (this.element.dataset.carousel == "scroll") {
       options = {
         ...this.defaultOptions,
         ...{
           // slidesPerView: 1,
           scrollbar: {
-            el: '.swiper-scrollbar',
+            el: ".swiper-scrollbar",
             draggable: true,
           },
           navigation: false,
@@ -74,12 +74,12 @@ export default class Carousel {
         },
       };
     }
-    if (this.element.dataset.carousel == 'solo') {
+    if (this.element.dataset.carousel == "solo") {
       options = {
         ...this.defaultOptions,
         ...{
           slidesPerView: 1,
-          spaceBetween: 0,
+          spaceBetween: 200,
           loop: false,
           centeredSlides: true,
 
@@ -92,11 +92,11 @@ export default class Carousel {
       };
     }
 
-    if (this.element.dataset.carousel == 'rotation') {
+    if (this.element.dataset.carousel == "rotation") {
       options = {
         ...{
           slidesPerView: 2,
-          effect: 'coverflow',
+          effect: "coverflow",
           grabCursor: true,
           centeredSlides: true,
           loop: true,
@@ -109,7 +109,7 @@ export default class Carousel {
             slideShadows: true,
           },
           pagination: {
-            el: '.swiper-pagination',
+            el: ".swiper-pagination",
           },
           breakpoints: {
             768: {

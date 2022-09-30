@@ -1,0 +1,37 @@
+.heroProjets {
+  .wrapper {
+    max-width: $breakpoint-xl;
+  }
+}
+.zoneSousTitreProjet {
+  position: absolute;
+  bottom: -123px;
+  left: -200px;
+  .ligneProjet {
+    border: none;
+    width: 435px;
+    height: 4px;
+    background-color: var(--color-primary);
+  }
+  h3 {
+    text-align: center;
+    font-weight: bold;
+    color: var(--color-white);
+    margin: 23px 0 23px 0;
+  }
+}
+.flechesProjet {
+  position: absolute;
+
+  .fleche1 {
+    position: absolute;
+  }
+  .fleche2 {
+    right: -65px;
+    position: absolute;
+  }
+  .icon--md {
+    height: 2em;
+    width: 2em;
+  }
+}
