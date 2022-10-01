@@ -1,0 +1,33 @@
+.grid {
+  border: none;
+  padding: 0;
+}
+.input {
+  display: flex;
+  flex-direction: column;
+  margin-top: 47px;
+}
+.contenuContact {
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-primary);
+    font-weight: 500;
+  }
+}
+.input__label {
+  margin-bottom: 6px;
+}
+.input__element {
+  background-color: var(--color-complementaire1-transparent);
+  border-radius: 10px;
+  border: solid 2px var(--color-white);
+  height: 43px;
+}
+.infoContact {
+  ul {
+    list-style: none;
+  }
+  font-weight: 600;
+  font-size: 2rem;
+}
