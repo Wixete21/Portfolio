@@ -20,18 +20,34 @@
     margin: 23px 0 23px 0;
   }
 }
+
 .flechesProjet {
   position: absolute;
-
+  bottom: -40px;
+  left: 270px;
   .fleche1 {
     position: absolute;
   }
   .fleche2 {
-    right: -65px;
+    right: -66px;
     position: absolute;
   }
   .icon--md {
-    height: 2em;
-    width: 2em;
+    height: 2.2em;
+    width: 1.9em;
+  }
+}
+.iconesProjets {
+  position: absolute;
+  bottom: 60px;
+  right: 235px;
+  display: flex;
+  .icon {
+    padding: 16px 19px 16px 19px;
+    background-color: var(--color-complementaire1);
+    border-radius: 30px;
+  }
+  .icon:nth-child(1) {
+    margin-right: 25px;
   }
 }
