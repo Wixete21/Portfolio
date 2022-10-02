@@ -1,0 +1,37 @@
+.infoContact {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      margin-bottom: 75px;
+      display: flex;
+    }
+  }
+  .icon {
+    margin-right: 22px;
+  }
+  a {
+    color: var(--color-white);
+  }
+  font-weight: 600;
+  font-size: 2rem;
+}
+.buttonForm {
+  background-color: transparent;
+  border: none;
+  padding: 17px 107px 17px 107px;
+  color: var(--color-white);
+  position: relative;
+  z-index: 1;
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: var(--color-primary);
+  }
+}
