@@ -33,7 +33,7 @@
                       type="text"
                       name="fullname"
                       id="fullname"
-                      placeholder="ex.: Rémi Therrien"
+                      placeholder="ex. Rémi Therrien"
                       required
                     />
                   </div>
@@ -46,7 +46,7 @@
                       type="email"
                       name="email"
                       id="email"
-                      placeholder="ex.: therrienremi@gmail.com"
+                      placeholder="ex. therrienremi@gmail.com"
                       required
                     />
                   </div>
@@ -57,7 +57,7 @@
                       type="tel"
                       name="phone"
                       id="phone"
-                      placeholder="(555) 667-8879"
+                      placeholder="ex. (555) 667-8879"
                       patter="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$"
                       required
                     />
@@ -74,7 +74,11 @@
                 </fieldset>
 
                 <footer class="form__footer">
-                  <button class="buttonForm">Envoyer</button>
+                  <button class="buttonForm"><span>Envoyer</span></button>
+                  <div class="form__confirmation">
+                    <h2>Merci</h2>
+                    <p>Votre formulaire a bien été envoyé!</p>
+                  </div>
                 </footer>
               </div>
             </form>
@@ -128,7 +132,7 @@
           </div>
         </div>
       </div>
-      <footer>
+      <footer class="footerContact">
         <p>Rémi Therrien © Tous droits réservés</p>
       </footer>
     </div>

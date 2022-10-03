@@ -17,21 +17,40 @@
   font-weight: 600;
   font-size: 2rem;
 }
+.footerContact {
+  text-align: center;
+  font-size: 0.875rem;
+  margin-top: 84px;
+}
 .buttonForm {
   background-color: transparent;
   border: none;
   padding: 17px 107px 17px 107px;
   color: var(--color-white);
   position: relative;
-  z-index: 1;
-  &::before {
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  span {
+    position: relative;
+    z-index: 1;
+  }
+
+  &::after {
     content: "";
 
     position: absolute;
+
     top: 0;
     left: 0;
-    width: 50%;
+    width: 140%;
     height: 100%;
     background-color: var(--color-primary);
+    transform: translateX(-64%);
+    transition: all 0.4s ease-in-out;
+  }
+
+  &:hover:after {
+    transform: translateX(0);
   }
 }

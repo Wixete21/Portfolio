@@ -1,4 +1,4 @@
-/** Composante  de TimTools */
+/** Composante form de TimTools */
 export default class Form {
   /**
    * Méthode constructeur
@@ -7,7 +7,6 @@ export default class Form {
   constructor(element) {
     this.element = element;
     this.formElements = this.element.elements;
-
     this.init();
   }
 
@@ -32,19 +31,19 @@ export default class Form {
     event.preventDefault();
 
     if (this.validate()) {
-      console.log("sucess");
-      // envoi ajax du formulaire
+      console.log("succes");
+      // envoie ajax du formulaire
+
       this.showConfirmation();
     } else {
-      console.log("fail");
+      console.log("error");
     }
   }
 
   /**
-   * method description
-   * @returns {boolean} status de la validation
+   * Méthode description
+   * @return {boolean} status de la validation
    */
-
   validate() {
     let isValid = true;
     for (let i = 0; i < this.formElements.length; i++) {
@@ -54,7 +53,8 @@ export default class Form {
         isValid = false;
       }
     }
-    return true;
+
+    return isValid;
   }
 
   validateInput(event) {
