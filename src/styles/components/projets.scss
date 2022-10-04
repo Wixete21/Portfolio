@@ -50,4 +50,11 @@
   .icon:nth-child(1) {
     margin-right: 25px;
   }
+
+  &.rpg {
+    right: 370px;
+    .icon:nth-child(2) {
+      margin-right: 25px;
+    }
+  }
 }
