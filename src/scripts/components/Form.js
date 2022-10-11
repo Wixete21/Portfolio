@@ -28,12 +28,17 @@ export default class Form {
   }
 
   onSubmit(event) {
+    this.isSent = false;
     event.preventDefault();
 
     if (this.validate()) {
       console.log("succes");
       // envoie ajax du formulaire
-
+      document.getElementById("formulaire").submit();
+      this.isSent = true;
+      if (this.isSent == true) {
+        window.name = "envoye";
+      }
       this.showConfirmation();
     } else {
       console.log("error");
