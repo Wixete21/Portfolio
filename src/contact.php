@@ -1,4 +1,21 @@
+
 <!DOCTYPE html>
+<?php 
+
+
+if($_POST["comment"]) {
+
+
+mail("therrienremi@gmail.com", "contact Portfolio",
+
+
+$_POST["comment"]. "From: an@email.address");
+
+
+}
+
+
+?>
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
@@ -48,7 +65,8 @@
           <div class="formulaire">
             <h1>Me contacter</h1>
             <form
-              action=""
+              method="post"
+              action="envoiEmail.php"
               class="form"
               autocomplete="off"
               data-component="Form"

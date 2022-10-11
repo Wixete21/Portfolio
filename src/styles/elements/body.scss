@@ -8,7 +8,7 @@
   $value: "#{random(2000)}px #{random(2000)}px #FFF";
 
   @for $i from 2 through $n {
-    $value: "#{$value} , #{random(2000)}px #{random(3000)}px #FFF";
+    $value: "#{$value} , #{random(2000)}px #{random(8000)}px #FFF";
   }
   @return unquote($value);
 }
@@ -36,7 +36,7 @@ body {
   &::after {
     content: " ";
     position: absolute;
-    top: 2000px;
+    top: 4000px;
     width: 1px;
     height: 1px;
     background: transparent;
@@ -57,7 +57,7 @@ body {
   &::after {
     content: " ";
     position: absolute;
-    top: 2000px;
+    top: 4000px;
     width: 2px;
     height: 2px;
     overflow: hidden;
@@ -76,7 +76,7 @@ body {
   &::after {
     content: " ";
     position: absolute;
-    top: 2000px;
+    top: 4000px;
     width: 3px;
     overflow: hidden;
     height: 3px;
