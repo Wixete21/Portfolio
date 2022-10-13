@@ -13,6 +13,7 @@ export default class Header {
 
     this.init();
     this.initNavMobile();
+    this.initNav2();
   }
   /**
    * Méthode d'initialisation
@@ -67,6 +68,11 @@ export default class Header {
 
     toggle.addEventListener("click", this.onToggleNav.bind(this));
   }
+  initNav2() {
+    const toggleMobile = this.element.querySelector(".js-toggle-mobile");
+    toggleMobile.addEventListener("click", this.onToggleNavMobile.bind(this));
+  }
+
   /**
    * Méthode onToggleNav
    * Ouvre le nav et change le button
@@ -75,5 +81,10 @@ export default class Header {
     this.html.classList.toggle("nav-is-active");
     const toggle = this.element.querySelector(".js-toggle");
     toggle.classList.toggle("nav-is-active");
+  }
+  onToggleNavMobile() {
+    this.html.classList.toggle("nav-is-active");
+    const toggleMobile = this.element.querySelector(".js-toggle-mobile");
+    toggleMobile.classList.toggle("nav-is-active");
   }
 }

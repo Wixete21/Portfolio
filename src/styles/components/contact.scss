@@ -10,12 +10,13 @@
     li {
       margin-bottom: 75px;
       display: flex;
-      justify-content: center;
+
       @media screen and (max-width: $breakpoint-md) {
         margin-bottom: 20%;
       }
       @media screen and (max-width: $breakpoint-sm) {
         margin-bottom: 30px;
+        justify-content: center;
       }
     }
     @media screen and (max-width: $breakpoint-sm) {
