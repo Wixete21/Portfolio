@@ -1,4 +1,8 @@
 .infoContact {
+  max-width: 43%;
+  @media screen and (max-width: $breakpoint-sm) {
+    max-width: 100%;
+  }
   ul {
     list-style: none;
     margin: 0;
@@ -6,6 +10,18 @@
     li {
       margin-bottom: 75px;
       display: flex;
+      justify-content: center;
+      @media screen and (max-width: $breakpoint-md) {
+        margin-bottom: 20%;
+      }
+      @media screen and (max-width: $breakpoint-sm) {
+        margin-bottom: 30px;
+      }
+    }
+    @media screen and (max-width: $breakpoint-sm) {
+      li:nth-child(4) {
+        margin-bottom: 0;
+      }
     }
   }
   .icon {
@@ -16,21 +32,34 @@
   }
   font-weight: 600;
   font-size: 2rem;
+  @media screen and (max-width: $breakpoint-md) {
+    font-size: 1.8rem;
+  }
+  @media screen and (max-width: $breakpoint-sm) {
+    font-size: 1.5rem;
+  }
 }
 .footerContact {
   text-align: center;
   font-size: 0.875rem;
   margin-top: 84px;
+  @media screen and (max-width: $breakpoint-sm) {
+    margin-top: 20px;
+  }
 }
 .buttonForm {
   background-color: transparent;
   border: none;
   padding: 17px 107px 17px 107px;
+
   color: var(--color-white);
   position: relative;
   cursor: pointer;
   outline: none;
   overflow: hidden;
+  @media screen and (max-width: $breakpoint-md) {
+    padding: 13px 95px 13px 95px;
+  }
   span {
     position: relative;
     z-index: 1;
