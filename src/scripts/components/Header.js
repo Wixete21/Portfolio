@@ -83,8 +83,8 @@ export default class Header {
     toggle.classList.toggle("nav-is-active");
   }
   onToggleNavMobile() {
-    this.html.classList.toggle("nav-is-active");
+    this.html.classList.toggle("nav-is-active-mobile");
     const toggleMobile = this.element.querySelector(".js-toggle-mobile");
-    toggleMobile.classList.toggle("nav-is-active");
+    toggleMobile.classList.toggle("nav-is-active-mobile");
   }
 }

@@ -43,7 +43,7 @@
   background-color: var(--color-complementaire1);
   height: 100vh;
   width: 100vw;
-  transform: translatey(-120%);
+  transform: translatey(-100%);
   transition: all 0.5s $ease-in-out-cubic;
   position: absolute;
 
@@ -143,8 +143,14 @@ html.nav-is-active {
   .li-anime {
     transform: translateX(0);
   }
+}
+html.nav-is-active-mobile {
   .mobileNavBouge {
     transform: translateY(0);
+  }
+
+  body {
+    overflow: hidden;
   }
 }
 .header__toggle {
@@ -172,6 +178,23 @@ html.nav-is-active {
   outline: none;
   cursor: pointer;
   .nav-is-active & {
+    span {
+      &:nth-child(1) {
+        transform: rotate(45deg);
+        top: calc(
+          240% - var(--bar-height) / 2 - var(--bar-height) - var(--bar-spacer)
+        );
+      }
+      &:nth-child(2) {
+        width: var(--bar-width);
+        top: calc(
+          240% - var(--bar-height) / 2 - var(--bar-height) - var(--bar-spacer)
+        );
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  .nav-is-active-mobile & {
     span {
       &:nth-child(1) {
         transform: rotate(45deg);
