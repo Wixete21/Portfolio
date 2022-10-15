@@ -1,12 +1,31 @@
 .heroAccueil {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-top: 187px;
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 187px;
+    flex-wrap: wrap;
+    @media screen and (max-width: $breakpoint-extra) {
+      max-width: $breakpoint-md;
+    }
+    @media screen and (max-width: $breakpoint-sm) {
+      max-width: $breakpoint-sm;
+      justify-content: space-around;
+    }
+  }
   h2 {
     margin: 0;
     animation: glow 1s ease-in-out infinite alternate;
+    @media screen and (max-width: $breakpoint-extra) {
+      font-size: 2.5rem;
+    }
+    @media screen and (max-width: $breakpoint-md) {
+      font-size: 2rem;
+    }
+    @media screen and (max-width: $breakpoint-autre) {
+      font-size: 1.5rem;
+    }
   }
   @keyframes glow {
     from {
@@ -19,7 +38,17 @@
   }
   .proposEtLigne {
     padding-top: 125px;
+
+    width: 11.8%;
+    @media screen and (max-width: $breakpoint-extra) {
+      width: 8%;
+      padding-top: 90px;
+    }
+    @media screen and (max-width: $breakpoint-sm) {
+      display: none;
+    }
     .horizontal {
+      max-width: 169px;
       position: relative;
     }
     h2 {
@@ -28,28 +57,89 @@
       left: -132%;
     }
   }
+  .proposEtLigne.mobile {
+    display: none;
+    padding-top: 0;
+    width: 40%;
+    margin-top: 25px;
+    .lignePropos {
+      height: 69px;
+      width: 6px;
+      border: none;
+      background-color: white;
+      text-align: center;
+
+      &:after {
+        display: none;
+      }
+    }
+    h2 {
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+    @media screen and (max-width: $breakpoint-sm) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
   .contactEtligne {
     padding-top: 125px;
+    width: 11.8%;
+    @media screen and (max-width: $breakpoint-extra) {
+      width: 8%;
+      padding-top: 90px;
+    }
+    @media screen and (max-width: $breakpoint-sm) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 0;
+      width: 40%;
+      margin-top: 25px;
+      .ligneContact {
+        height: 69px;
+        width: 6px;
+        border: none;
+        background-color: white;
+        text-align: center;
+
+        &:after {
+          display: none;
+        }
+      }
+      h2 {
+        position: relative !important;
+        top: 0 !important;
+        right: 0 !important;
+      }
+    }
     .horizontal {
+      max-width: 169px;
       position: relative;
     }
     h2 {
       position: absolute;
       top: 85px;
-      right: -94%;
+      right: -120%;
     }
   }
-  h2:nth-child(1) {
-    width: 100%;
-  }
+
   .ligneProjet {
     height: 169px;
     width: 6px;
     border: none;
     background-color: white;
+    @media screen and (max-width: $breakpoint-extra) {
+      height: 120px;
+    }
+    @media screen and (max-width: $breakpoint-sm) {
+      height: 69px;
+    }
   }
   .lignePropos {
-    width: 169px;
+    width: 100%;
     height: 6px;
     border: none;
     background-color: white;
@@ -65,7 +155,7 @@
     }
   }
   .ligneContact {
-    width: 169px;
+    width: 100%;
     height: 6px;
     border: none;
     background-color: white;
@@ -85,17 +175,40 @@
 
     margin-top: 10px;
   }
-  flex-wrap: wrap;
+
   .titrePrincipale {
     text-align: center;
     margin: 42px 42px 0 42px;
+    @media screen and (max-width: $breakpoint-extra) {
+      margin: 25px 25px 0 25px;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
     h2 {
       color: var(--color-white);
       text-transform: none;
       animation: none;
+      @media screen and (max-width: $breakpoint-lg) {
+        font-size: 2.5rem;
+      }
+      @media screen and (max-width: $breakpoint-md) {
+        font-size: 2rem;
+      }
+      @media screen and (max-width: $breakpoint-autre) {
+        font-size: 1.5rem;
+      }
     }
     h1 {
       margin-bottom: 25px;
+      @media screen and (max-width: $breakpoint-extra) {
+        margin-bottom: 15px;
+      }
     }
   }
 }
