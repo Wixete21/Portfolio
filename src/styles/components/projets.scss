@@ -7,17 +7,35 @@
   position: absolute;
   bottom: -123px;
   left: -200px;
+  @media screen and (max-width: $breakpoint-md) {
+    left: 33%;
+  }
   .ligneProjet {
     border: none;
     width: 435px;
     height: 4px;
     background-color: var(--color-primary);
+    @media screen and (max-width: $breakpoint-extra) {
+      width: 300px;
+    }
+    @media screen and (max-width: $breakpoint-md) {
+      width: 245px;
+    }
   }
   h3 {
     text-align: center;
     font-weight: bold;
     color: var(--color-white);
     margin: 23px 0 23px 0;
+    @media screen and (max-width: $breakpoint-extra) {
+      font-size: 2rem;
+    }
+    @media screen and (max-width: $breakpoint-md) {
+      margin: 15px 0 15px 0;
+    }
+    @media screen and (max-width: $breakpoint-sm) {
+      font-size: 1.5rem;
+    }
   }
 }
 
@@ -25,6 +43,12 @@
   position: absolute;
   bottom: -40px;
   left: 270px;
+  @media screen and (max-width: $breakpoint-extra) {
+    left: 130px;
+  }
+  @media screen and (max-width: $breakpoint-md) {
+    display: none;
+  }
   .fleche1 {
     position: absolute;
   }
@@ -35,6 +59,10 @@
   .icon--md {
     height: 2.2em;
     width: 1.9em;
+    @media screen and (max-width: $breakpoint-extra) {
+      height: 1.8em;
+      width: 2em;
+    }
   }
 }
 .iconesProjets {
@@ -42,19 +70,71 @@
   bottom: 60px;
   right: 235px;
   display: flex;
+  @media screen and (max-width: $breakpoint-extra) {
+    bottom: 40px;
+    right: 200px;
+  }
+  @media screen and (max-width: $breakpoint-autre) {
+    top: -11px;
+    right: 40%;
+    bottom: 0;
+  }
+  @media screen and (max-width: $breakpoint-xs) {
+    top: -11px;
+    right: 45%;
+    bottom: 0;
+  }
+  @media screen and (max-width: $breakpoint-md) {
+    top: -11px;
+    bottom: 0;
+  }
   .icon {
     padding: 16px 19px 16px 19px;
     background-color: var(--color-complementaire1);
     border-radius: 30px;
+    @media screen and (max-width: $breakpoint-extra) {
+      width: 2em;
+      height: 2em;
+    }
+    @media screen and (max-width: $breakpoint-md) {
+      padding: 9px 9px 9px 9px;
+      border-radius: 11px;
+      width: 1.5em;
+      height: 1.5em;
+    }
   }
+
   .icon:nth-child(1) {
     margin-right: 25px;
   }
 
   &.rpg {
     right: 370px;
+    @media screen and (max-width: $breakpoint-extra) {
+      right: 310px;
+    }
+    @media screen and (max-width: $breakpoint-autre) {
+      right: 370px;
+    }
     .icon:nth-child(2) {
       margin-right: 25px;
     }
+  }
+}
+.buttonSavoir {
+  display: none;
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px 10px 20px;
+  margin-top: 130px;
+  align-self: center;
+  @media screen and (max-width: $breakpoint-md) {
+    display: block;
+  }
+  h3 {
+    margin: 0;
+    font-size: 2rem;
+    color: white;
   }
 }

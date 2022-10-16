@@ -79,7 +79,7 @@ export default class Carousel {
         ...this.defaultOptions,
         ...{
           slidesPerView: 1,
-          spaceBetween: 200,
+          spaceBetween: 500,
           loop: false,
           centeredSlides: true,
 

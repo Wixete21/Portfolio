@@ -9,10 +9,10 @@
   overflow: hidden;
   width: 100%;
 
-  padding-bottom: 150px;
   margin: 0;
   @media screen and (max-width: $breakpoint-md) {
     width: 100%;
+    height: 100%;
   }
 }
 
@@ -23,14 +23,21 @@
   width: 50%;
   @media screen and (max-width: $breakpoint-md) {
     width: 100%;
+    height: 580px;
   }
 }
 
 .swiper-pagination {
   display: flex;
-  padding-top: 55px;
-  justify-content: flex-end;
+  padding-top: 180px;
+  justify-content: center;
   width: 100%;
+  @media screen and (max-width: $breakpoint-extra) {
+    padding-top: 150px;
+  }
+  @media screen and (max-width: $breakpoint-md) {
+    padding-top: 0;
+  }
 }
 .swiper-slide {
   width: 100%;
@@ -39,12 +46,27 @@
   margin: 0;
 }
 .swiper-slide-content {
+  @media screen and (max-width: $breakpoint-md) {
+    display: flex;
+    justify-content: center;
+  }
   article {
     margin-left: 400px;
     position: relative;
 
+    @media screen and (max-width: $breakpoint-md) {
+      margin-left: 0;
+      width: 100%;
+      height: 375px;
+      display: flex;
+      flex-direction: column;
+    }
     img {
       border-radius: 15px;
+      height: 100%;
+      @media screen and (max-width: $breakpoint-md) {
+        max-width: none;
+      }
     }
   }
 }
@@ -55,6 +77,33 @@
   background-color: var(--color-complementaire1-transparent);
   padding: 60px 98px 60px 98px;
   border-radius: 3px;
+  @media screen and (max-width: $breakpoint-extra) {
+    padding: 40px 67px 40px 67px;
+  }
+  @media screen and (max-width: $breakpoint-md) {
+    left: 29.7%;
+
+    padding: 25px 40px 25px 40px;
+
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+}
+.swiper-slide:nth-child(2) {
+  .zoneTitreProjet {
+    @media screen and (max-width: $breakpoint-md) {
+      left: 27%;
+    }
+  }
+  .zoneSousTitreProjet {
+    @media screen and (max-width: $breakpoint-md) {
+      left: 30%;
+    }
+    @media screen and (max-width: $breakpoint-sm) {
+      left: 33%;
+    }
+  }
 }
 .swiper-pagination-bullet {
   background-color: transparent;
@@ -66,6 +115,13 @@
   width: 23px;
   margin: 0 100px 0 0;
   cursor: pointer;
+  @media screen and (max-width: $breakpoint-extra) {
+    height: 20px;
+    width: 20px;
+  }
+  @media screen and (max-width: $breakpoint-autre) {
+    margin: 0 50px 0 0;
+  }
 }
 .swiper-pagination-bullet:nth-child(4) {
   margin: 0;
