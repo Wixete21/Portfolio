@@ -2,6 +2,8 @@ import Carousel from "./components/Carousel";
 import Form from "./components/Form";
 import Header from "./components/Header";
 import Video from "./components/Video";
+import Qualite from "./components/Qualite";
+
 export default class ComponentFactory {
   constructor() {
     this.componentInstances = [];
@@ -10,6 +12,7 @@ export default class ComponentFactory {
       Form,
       Header,
       Video,
+      Qualite,
     };
     this.init();
   }

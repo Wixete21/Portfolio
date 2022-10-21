@@ -67,6 +67,7 @@
   li {
     z-index: 10;
   }
+
   @media screen and (max-width: $breakpoint-sm) {
     display: flex;
     justify-content: space-around;
@@ -113,6 +114,15 @@
     .li-anime {
       transform: translateX(980%);
       transition: all 1s $ease-out-back;
+      a {
+        box-shadow: inset 0 0 0 0 var(--color-primary);
+        margin: 0 -0.25rem;
+        padding: 0 0.25rem;
+        transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      }
+      a:hover {
+        box-shadow: inset 150px 0 0 0 var(--color-primary);
+      }
     }
 
     list-style: none;

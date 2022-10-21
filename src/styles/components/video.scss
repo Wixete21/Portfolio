@@ -15,12 +15,7 @@
     aspect-ratio: 1/1;
   }
 }
-.section__video {
-  //---**  version tablette  **---//
-  @media screen and (max-width: $breakpoint-md) {
-    display: none;
-  }
-}
+
 .buttonVideo {
   cursor: pointer;
   background-color: var(--color-complementaire1);
@@ -28,6 +23,22 @@
   position: absolute;
   bottom: -50px;
   right: 34.2%;
+
+  @media screen and (max-width: $breakpoint-extra) {
+    right: 32%;
+    font-size: 2rem;
+  }
+  @media screen and (max-width: $breakpoint-md) {
+    right: 28%;
+  }
+  @media screen and (max-width: $breakpoint-sm) {
+    right: 27%;
+    padding: 18px 50px 18px 50px;
+    position: static;
+  }
+  @media screen and (max-width: $breakpoint-autre) {
+    padding: 9px 30px 9px 30px;
+  }
   padding: 18px 70px 18px 70px;
   font-size: var(--font-size-h3);
   font-family: var(--font-primary);
@@ -43,7 +54,7 @@
   width: 100%;
   padding-bottom: 5%; /*--ratio 16:9 */
   position: relative;
-
+  filter: drop-shadow(0 4px 4px var(--color-primary));
   img {
     object-fit: cover;
     height: 100%;

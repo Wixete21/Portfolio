@@ -2,15 +2,56 @@
   .wrapper {
     display: flex;
     justify-content: space-between;
+
+    @media screen and (max-width: $breakpoint-lg) {
+      max-width: $breakpoint-extra;
+    }
+
+    @media screen and (max-width: $breakpoint-extra) {
+      max-width: $breakpoint-md;
+      justify-content: space-around;
+    }
+    @media screen and (max-width: $breakpoint-md) {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    .photoProfil1 {
+      @media screen and (max-width: $breakpoint-md) {
+        display: none;
+      }
+    }
+    .photoProfil2 {
+      display: none;
+      @media screen and (max-width: $breakpoint-md) {
+        display: block;
+      }
+    }
+    img {
+      object-fit: cover;
+      @media screen and (max-width: $breakpoint-md) {
+        height: 600px;
+        width: 60%;
+      }
+      @media screen and (max-width: $breakpoint-sm) {
+        width: 80%;
+      }
+    }
   }
   .ligneDescription {
     border: none;
     background: var(--color-white);
     height: 4px;
-    width: 541px;
   }
   .description {
     width: 37.6%;
+    @media screen and (max-width: $breakpoint-md) {
+      width: 60%;
+      text-align: center;
+      margin-top: 30px;
+    }
+    @media screen and (max-width: $breakpoint-sm) {
+      width: 80%;
+    }
     .formationTexte {
       font-weight: bold;
       color: var(--color-primary);
@@ -20,6 +61,18 @@
     }
     h3 {
       color: var(--color-white);
+      font-weight: 600;
+      @media screen and (max-width: $breakpoint-md) {
+        font-size: 2rem;
+      }
+      @media screen and (max-width: $breakpoint-autre) {
+        font-size: 1.5rem;
+      }
+    }
+    p {
+      @media screen and (max-width: $breakpoint-md) {
+        font-size: 1.125rem;
+      }
     }
   }
   .zoneQualitees {
@@ -35,25 +88,128 @@
     li:nth-child(3),
     li:nth-child(4) {
       margin: 27px 0 27px 0;
+      @media screen and (max-width: $breakpoint-md) {
+        margin: 27px 15% 27px 15%;
+      }
     }
     li {
       display: flex;
       justify-content: center;
       align-items: center;
-
+      position: relative;
       color: var(--color-primary);
       list-style: none;
       background-color: var(--color-complementaire1);
-      width: 541px;
+      @media screen and (max-width: $breakpoint-md) {
+        width: 70%;
+        margin: 27px 15% 27px 15%;
+        height: 50px;
+      }
       height: 65px;
+
+      h2:nth-child(1) {
+        @media screen and (max-width: $breakpoint-md) {
+          font-size: 2rem;
+        }
+      }
+      h2:nth-child(2) {
+        display: none;
+      }
+    }
+
+    .qualitesMystere1.qualitedevoile {
+      h2:nth-child(1) {
+        display: none;
+      }
+      h2:nth-child(2) {
+        display: block;
+        font-size: 2rem;
+        @media screen and (max-width: $breakpoint-sm) {
+          font-size: 1.5rem;
+        }
+        @media screen and (max-width: $breakpoint-autre) {
+          font-size: 1.125rem;
+        }
+      }
+    }
+
+    .qualitesMystere2.qualitedevoile {
+      h2:nth-child(1) {
+        display: none;
+      }
+      h2:nth-child(2) {
+        display: block;
+        font-size: 2rem;
+        @media screen and (max-width: $breakpoint-sm) {
+          font-size: 1.5rem;
+        }
+        @media screen and (max-width: $breakpoint-autre) {
+          font-size: 1.125rem;
+        }
+      }
+    }
+    .qualitesMystere3.qualitedevoile {
+      h2:nth-child(1) {
+        display: none;
+      }
+      h2:nth-child(2) {
+        display: block;
+        font-size: 2rem;
+        @media screen and (max-width: $breakpoint-sm) {
+          font-size: 1.5rem;
+        }
+        @media screen and (max-width: $breakpoint-autre) {
+          font-size: 1.125rem;
+        }
+      }
+    }
+    .qualitesMystere4.qualitedevoile {
+      h2:nth-child(1) {
+        display: none;
+      }
+      h2:nth-child(2) {
+        display: block;
+        font-size: 2rem;
+        @media screen and (max-width: $breakpoint-sm) {
+          font-size: 1.5rem;
+        }
+        @media screen and (max-width: $breakpoint-autre) {
+          font-size: 1.125rem;
+        }
+      }
+    }
+    .qualitesMystere5.qualitedevoile {
+      h2:nth-child(1) {
+        display: none;
+      }
+      h2:nth-child(2) {
+        display: block;
+        font-size: 2rem;
+        @media screen and (max-width: $breakpoint-sm) {
+          font-size: 1.5rem;
+        }
+        @media screen and (max-width: $breakpoint-autre) {
+          font-size: 1.125rem;
+        }
+      }
     }
     h2 {
       margin: 0;
+      cursor: pointer;
+
+      animation: glow 1s ease-in-out infinite alternate;
+
+      @keyframes glow {
+        from {
+          text-shadow: 0 0 1px var(--color-primary),
+            0 0 5px var(--color-primary);
+        }
+        to {
+          text-shadow: 0 0 1px var(--color-primary),
+            0 0 5px var(--color-primary), 0 0 8px var(--color-primary);
+        }
+      }
     }
-  }
-  img {
-    height: 787px;
-    width: 35.5%;
   }
 }
 
@@ -92,6 +248,17 @@
     justify-content: center;
     align-items: center;
     border-radius: 10px 10px 0 0;
+    @media screen and (max-width: $breakpoint-sm) {
+      border-radius: 0;
+    }
+    h2 {
+      @media screen and (max-width: $breakpoint-extra) {
+        font-size: 2.5rem;
+      }
+      @media screen and (max-width: $breakpoint-sm) {
+        font-size: 2rem;
+      }
+    }
   }
   .langages {
     width: 40%;
@@ -103,8 +270,41 @@
     padding-bottom: 26px;
     height: 496px;
     border-radius: 10px;
+    @media screen and (max-width: $breakpoint-extra) {
+      height: 440px;
+    }
+    @media screen and (max-width: $breakpoint-sm) {
+      height: 380px;
+      width: 50%;
+      border-radius: 0;
+    }
     h3 {
       margin: 0 0 0 40px;
+      @media screen and (max-width: $breakpoint-extra) {
+        font-size: 2rem;
+      }
+      @media screen and (max-width: $breakpoint-sm) {
+        font-size: 1.5rem;
+        margin: 0 0 0 20px;
+      }
+      @media screen and (max-width: $breakpoint-autre) {
+        margin: 0 0 0 10px;
+      }
+    }
+    .icon {
+      @media screen and (max-width: $breakpoint-extra) {
+        width: 2.4em;
+        height: 2.4em;
+      }
+      @media screen and (max-width: $breakpoint-sm) {
+        width: 1.8em;
+        height: 1.8em;
+      }
+    }
+    li:nth-child(2) {
+      .icon {
+        color: var(--color-complementaire1);
+      }
     }
   }
   .logiciels {
@@ -117,8 +317,36 @@
     height: 496px;
     padding-bottom: 26px;
     border-radius: 10px;
+    @media screen and (max-width: $breakpoint-extra) {
+      height: 440px;
+    }
+    @media screen and (max-width: $breakpoint-sm) {
+      height: 380px;
+      width: 50%;
+      border-radius: 0;
+    }
     h3 {
       margin: 0 40px 0 0;
+      @media screen and (max-width: $breakpoint-extra) {
+        font-size: 2rem;
+      }
+      @media screen and (max-width: $breakpoint-sm) {
+        font-size: 1.5rem;
+        margin: 0 20px 0 0;
+      }
+      @media screen and (max-width: $breakpoint-autre) {
+        margin: 0 10px 0 0;
+      }
+    }
+    .icon {
+      @media screen and (max-width: $breakpoint-extra) {
+        width: 2.4em;
+        height: 2.4em;
+      }
+      @media screen and (max-width: $breakpoint-sm) {
+        width: 1.8em;
+        height: 1.8em;
+      }
     }
     ul {
       li {
@@ -134,6 +362,17 @@
     justify-content: center;
     align-items: center;
     border-radius: 10px 10px 0 0;
+    @media screen and (max-width: $breakpoint-sm) {
+      border-radius: 0;
+    }
+    h2 {
+      @media screen and (max-width: $breakpoint-extra) {
+        font-size: 2.5rem;
+      }
+      @media screen and (max-width: $breakpoint-sm) {
+        font-size: 2rem;
+      }
+    }
   }
 }
 .perspectives {
@@ -144,9 +383,18 @@
   padding: 52px 0 60px 0;
   h2 {
     margin: 0 0 25px 0;
+    @media screen and (max-width: $breakpoint-extra) {
+      font-size: 2.5rem;
+    }
+    @media screen and (max-width: $breakpoint-sm) {
+      font-size: 2rem;
+    }
   }
   p {
     margin: 0;
+    @media screen and (max-width: $breakpoint-extra) {
+      font-size: 1.125rem;
+    }
     span {
       color: var(--color-primary);
       font-weight: 700;
@@ -159,6 +407,12 @@
     h2 {
       text-align: center;
       margin: 0 0 50px 0;
+      @media screen and (max-width: $breakpoint-extra) {
+        font-size: 2.5rem;
+      }
+      @media screen and (max-width: $breakpoint-autre) {
+        font-size: 2rem;
+      }
     }
   }
 }
@@ -166,9 +420,29 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media screen and (max-width: $breakpoint-sm) {
+    flex-direction: column;
+  }
   .icon--xl {
     width: 7rem;
     height: 7rem;
+    @media screen and (max-width: $breakpoint-md) {
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+  h3 {
+    @media screen and (max-width: $breakpoint-extra) {
+      font-size: 2rem;
+    }
+    @media screen and (max-width: $breakpoint-autre) {
+      font-size: 1.5rem;
+    }
+  }
+  p {
+    @media screen and (max-width: $breakpoint-extra) {
+      font-size: 1.125rem;
+    }
   }
   .jeuPassion {
     display: flex;
@@ -176,6 +450,9 @@
     flex-direction: column;
     text-align: center;
     width: 28%;
+    @media screen and (max-width: $breakpoint-sm) {
+      width: 50%;
+    }
     h3 {
       margin: 35px 0 35px 0;
     }
@@ -190,6 +467,10 @@
     flex-direction: column;
     text-align: center;
     width: 28%;
+    @media screen and (max-width: $breakpoint-sm) {
+      width: 50%;
+      margin-top: 30px;
+    }
     h3 {
       margin: 35px 0 35px 0;
     }
@@ -204,6 +485,10 @@
     justify-content: space-between;
     text-align: center;
     width: 28%;
+    @media screen and (max-width: $breakpoint-sm) {
+      width: 50%;
+      margin-top: 30px;
+    }
     h3 {
       margin: 35px 0 35px 0;
     }

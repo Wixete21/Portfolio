@@ -55,6 +55,17 @@
   .fleche2 {
     right: -66px;
     position: absolute;
+    animation: glow 1s ease-in-out infinite alternate;
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 1px var(--color-primary), 0 0 5px var(--color-primary);
+      }
+      to {
+        text-shadow: 0 0 1px var(--color-primary), 0 0 5px var(--color-primary),
+          0 0 8px var(--color-primary);
+      }
+    }
   }
   .icon--md {
     height: 2.2em;
@@ -70,6 +81,7 @@
   bottom: 60px;
   right: 235px;
   display: flex;
+
   @media screen and (max-width: $breakpoint-extra) {
     bottom: 40px;
     right: 200px;
