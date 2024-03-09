@@ -232,7 +232,7 @@
 
       align-items: center;
     }
-    li:nth-child(4) {
+    li:nth-child(5) {
       margin-bottom: 0;
     }
   }
@@ -268,13 +268,13 @@
     align-items: center;
     flex-direction: column;
     padding-bottom: 26px;
-    height: 496px;
+    height: 600px;
     border-radius: 10px;
     @media screen and (max-width: $breakpoint-extra) {
-      height: 440px;
+      height: 520px;
     }
     @media screen and (max-width: $breakpoint-sm) {
-      height: 380px;
+      height: 460px;
       width: 50%;
       border-radius: 0;
     }
@@ -314,14 +314,14 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    height: 496px;
+    height: 600px;
     padding-bottom: 26px;
     border-radius: 10px;
     @media screen and (max-width: $breakpoint-extra) {
-      height: 440px;
+      height: 520px;
     }
     @media screen and (max-width: $breakpoint-sm) {
-      height: 380px;
+      height: 460px;
       width: 50%;
       border-radius: 0;
     }
