@@ -6,7 +6,7 @@
   if(!empty($email) && !empty($comment)){
     $subject = "From: $name <$email>";
     $body = "Name: $name\nEmail: $email\nPhone: $phone\nMessage:\n$comment,\n$name";
-    mail("1929932@cegepmontpetit.ca",$subject,$body);
+    mail("ther15@uqat.ca",$subject,$body);
     header("Location: https://rtherrien.dectim.ca/contact.html ");
 
   }else{

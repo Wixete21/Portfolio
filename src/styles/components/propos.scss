@@ -29,11 +29,11 @@
     img {
       object-fit: cover;
       @media screen and (max-width: $breakpoint-md) {
-        height: 600px;
-        width: 60%;
+        height: 400px;
+        width: 40%;
       }
       @media screen and (max-width: $breakpoint-sm) {
-        width: 80%;
+        width: 60%;
       }
     }
   }
